@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import scriptures.bll.DatabaseScriptureListHandler;
 import scriptures.bll.HardCodedScriptureListHandler;
 
 /**
@@ -37,7 +38,7 @@ public class ShowList extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        ScriptureListHandler handler = new HardCodedScriptureListHandler();
+        ScriptureListHandler handler = new DatabaseScriptureListHandler();
         List<Scripture> myList = handler.getFavoriteScriptures();
         
         request.setAttribute("scriptures", myList);

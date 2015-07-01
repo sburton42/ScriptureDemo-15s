@@ -13,14 +13,24 @@ public class Scripture {
     private String book;
     private int chapter;
     private int verse;
+    private int id;
 
     public Scripture(String book, int chapter, int verse) {
+        this.id = -1;
+        this.book = book;
+        this.chapter = chapter;
+        this.verse = verse;
+    }
+
+    public Scripture(int id, String book, int chapter, int verse) {
+        this.id = id;
         this.book = book;
         this.chapter = chapter;
         this.verse = verse;
     }
 
     public Scripture() {
+        id = -1;
         book = "Adam";
         chapter = 1;
         verse = 1;
