@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.byui.csee.cs313.scripturedemo;
+package scriptures.bll;
 
+import scriptures.bll.Scripture;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author sburton
  */
-public class HardCodedScriptureDataHandler implements ScriptureDataHandler {
+public class HardCodedScriptureListHandler implements ScriptureListHandler {
     @Override
     public List<Scripture> getFavoriteScriptures() {
         List<Scripture> myList = new ArrayList<Scripture>();
